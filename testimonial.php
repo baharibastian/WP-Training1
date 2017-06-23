@@ -21,6 +21,7 @@ function create() {
 	require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
 	dbDelta( $sql );
 }
+register_activation_hook( __FILE__, 'create' );
 
 function html_form_code() {
 	echo '<form action="" method="post">';
