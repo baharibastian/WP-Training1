@@ -17,7 +17,6 @@ class Foo_Widget extends WP_Widget {
 		// echo esc_html__( 'Hello, World!', 'text_domain' );
 		
 		global $wpdb;
-		$result = $wpdb->get_results('SELECT * FROM ' . $wpdb->prefix . 'testimonial order by rand() LIMIT 0.1');
 		$mylink = $wpdb->get_row('SELECT * FROM ' . $wpdb->prefix . 'testimonial ORDER BY rand() LIMIT 1');
 		?>
 		<div style="font-weight: normal;font-style: italic;font-size: 16px">"<?php echo $mylink->message ?>"</div>
@@ -36,13 +35,6 @@ class Foo_Widget extends WP_Widget {
 		</p>
 		<?php 
 	}
-	public function update( $new_instance, $old_instance ) {
-		$instance = array();
-		$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
-
-		return $instance;
-	}
-
 }
 
 add_action( 'widgets_init', 'register_foo_widget' );
