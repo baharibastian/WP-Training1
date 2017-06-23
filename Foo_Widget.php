@@ -1,13 +1,6 @@
 <?php
-/*
-Plugin Name: Foo Widget
-Description: Foo widget
-Version: 1.0
-Author: name
-License: GPL2
-*/
 class Foo_Widget extends WP_Widget {
-	
+
 	function __construct() {
 		parent::__construct(
 			'foo_widget', // Base ID
