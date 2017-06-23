@@ -68,7 +68,7 @@ function cf_shortcode() {
 
 add_shortcode( 'sitepoint_contact_form', 'cf_shortcode' );
 
-include_once('Foo_widget.php');
-include_once('top_level.php');
+include_once('widget.php');
+include_once('admin.php');
 
 ?>

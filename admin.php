@@ -2,7 +2,7 @@
 add_action('admin_menu', 'test_plugin_setup_menu');
 
 function test_plugin_setup_menu(){
-	add_menu_page( 'Test Plugin Page', 'Test Plugin', 'manage_options', 'test-plugin', 'test_init' );
+	add_menu_page( 'Testimonial Page', 'Testimonial', 'manage_options', 'view_testimonial', 'test_init' );
 }
 
 function test_init(){
@@ -29,7 +29,7 @@ function test_init(){
 				<td style="padding:10px"><?php echo $item->email ?></td>
 				<td style="padding:10px"><?php echo $item->phone ?></td>
 				<td style="padding:10px"><?php echo $item->message ?></td>
-				<td style="padding:10px"><a href="<?php echo admin_url('admin.php?page=test-plugin&id='.$item->id); ?>">Delete</a></td>
+				<td style="padding:10px"><a href="<?php echo admin_url('admin.php?page=view_testimonial&id='.$item->id); ?>">Delete</a></td>
 			</tr>
 			<?php
 		}
