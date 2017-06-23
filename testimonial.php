@@ -61,7 +61,6 @@ function send() {
 
 function cf_shortcode() {
 	ob_start();
-	create();
 	html_form_code();
 	send();
 	return ob_get_clean();
